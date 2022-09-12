@@ -6,6 +6,7 @@ private $titulo, $actores, $director, $guion, $produccion, $anio, $nacionalidad,
 
     public function listarForm($datos)
     {
+        $ver = "404 not found";
 
         if (isset($datos)) {
 
@@ -43,10 +44,10 @@ private $titulo, $actores, $director, $guion, $produccion, $anio, $nacionalidad,
                 $genero = $datos['genero'];
             }
         } else {
-            echo "sin datos";
+            $ver =  "sin datos";
         }
 
-        echo "<h3>La pelicula introducida es</h3>
+        $ver = "<h3>La pelicula introducida es</h3>
                                     <b>Titulo: </b> " . $titulo . "</br>
                                     <b>Actores: </b>" . $actores . "</br>
                                     <b>Director: </b>" . $director . "</br>
@@ -58,7 +59,8 @@ private $titulo, $actores, $director, $guion, $produccion, $anio, $nacionalidad,
                                     <b>Genero: </b>" . $genero . "</br>
                                     <b>Restricciones: </b>" . $restric . "</br>
                                     <b>Sinopsis: </b>" . $sinopsis . "</br>";
-    }
+        return $ver;
+                                }
 
 }
 
