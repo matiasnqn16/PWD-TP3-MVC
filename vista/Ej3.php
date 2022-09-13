@@ -10,7 +10,7 @@
     <script src="../utils/bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-<? include_once("../structures/header.php") ?>
+<?php include_once("../structures/header.php") ?>
 
 <div class="container mt-2 pb-1">
 
@@ -130,7 +130,7 @@
 </div>
 
 
-<? include_once("../structures/footer.php") ?>
+<?php include_once("../structures/footer.php") ?>
 
 </body>
 

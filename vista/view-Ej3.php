@@ -11,33 +11,42 @@
 </head>
 
 <body>
-    <? include_once("../structures/header.php") ?>
-    <? include_once("../control/formCine.php") ?>
-    <? include_once("../utils/funciones.php") ?>
-
+    <?php include_once ("../structures/header.php") ?>
+    <?php include_once ("../control/formCine.php") ?>
+    <?php include_once("../utils/funciones.php") ?>
+    <?php
+    include_once("../control/archivos.php")
+    ?>
+    
     <div class="container mt-2 pb-2" style="background-color: greenyellow;">
         <div class="row">
             <div class="col-md-6">
-                
             <?php 
                 $data = data_submitted();
                 $obj = new formCine();
                 $mostrar = $obj->listarForm($data);
-
-            echo $mostrar;
+                echo $mostrar;
             ?>
 
                 
             </div>
-            <div class="col-md-6 ">
-                
+            <div class="col-md-6 img">
+                <?php
+                $f = files_submitted();
+                $newObj = new archivo($f);
+                echo $newObj->guardarFile();
+                ?>
+
+                <img src="" alt="">
+            
+
             </div>
         </div>
     </div>
 
 
     </div>
-    <? include_once("../structures/footer.php") ?>
+    <?php include_once("../structures/footer.php") ?>
 
 </body>
 

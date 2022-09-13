@@ -43,22 +43,22 @@ private $titulo, $actores, $director, $guion, $produccion, $anio, $nacionalidad,
             if (isset($datos['genero'])) {
                 $genero = $datos['genero'];
             }
+            $ver = "<h3>La pelicula introducida es</h3>
+                                        <b>Titulo: </b> " . $titulo . "</br>
+                                        <b>Actores: </b>" . $actores . "</br>
+                                        <b>Director: </b>" . $director . "</br>
+                                        <b>Guión: </b>" . $guion . "</br>
+                                        <b>Produccion: </b>" . $produccion . "</br>
+                                        <b>Año: </b>" . $anio . "</br>
+                                        <b>Nacionalidad: </b>" . $nacionalidad . "</br>
+                                        <b>Duracion: </b>" . $duracion . "</br>
+                                        <b>Genero: </b>" . $genero . "</br>
+                                        <b>Restricciones: </b>" . $restric . "</br>
+                                        <b>Sinopsis: </b>" . $sinopsis . "</br>";
         } else {
             $ver =  "sin datos";
         }
-
-        $ver = "<h3>La pelicula introducida es</h3>
-                                    <b>Titulo: </b> " . $titulo . "</br>
-                                    <b>Actores: </b>" . $actores . "</br>
-                                    <b>Director: </b>" . $director . "</br>
-                                    <b>Guión: </b>" . $guion . "</br>
-                                    <b>Produccion: </b>" . $produccion . "</br>
-                                    <b>Año: </b>" . $anio . "</br>
-                                    <b>Nacionalidad: </b>" . $nacionalidad . "</br>
-                                    <b>Duracion: </b>" . $duracion . "</br>
-                                    <b>Genero: </b>" . $genero . "</br>
-                                    <b>Restricciones: </b>" . $restric . "</br>
-                                    <b>Sinopsis: </b>" . $sinopsis . "</br>";
+        
         return $ver;
                                 }
 
